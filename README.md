@@ -1,6 +1,7 @@
 # Hand-Joint-Detection-using-CV-and-DL
 1. Introduction
 Osteoarthritis (OA) is a prevalent form of arthritis affecting the knees, hips, and hand joints. Currently, manual screening and classification of hand OA involve a trained radiologist marking finger joints on X-ray images and performing measurements to assess disease severity. Due to the time-consuming nature of manual labeling, there is a pressing need for automatic computer-aided methods. The initial step in hand OA identification is to locate hand joints, including the Metacarpophalangeal (MCP), Proximal Interphalangeal (PIP), and Distal Interphalangeal (DIP) joints on each finger. This project aims to develop an algorithm that automates the detection of twelve joints in each hand X-ray image. The identified joints serve as regions of interest for subsequent OA severity assessment, including Kellgren and Lawrence (KL) grade and Joint Space Width (JSW) determination. Fig. 1 illustrates an example X-ray image with joint labels and angled bounding boxes.
+
 ![image](https://github.com/shriyaharal7/Hand-Joint-Detection-using-CV-and-DL-/assets/67820562/dab2f964-6fc2-41d5-936b-0c81ee68d630)
 
 Fig. 1: Hand X-ray with joint labels (the dots) and angled bounding boxes
