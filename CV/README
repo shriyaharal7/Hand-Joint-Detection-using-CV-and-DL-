@@ -1,1 +1,50 @@
+#Overview
+This MATLAB code is designed for the automated detection of hand joints in X-ray images, contributing to the screening and classification of Osteoarthritis (OA). The code performs essential tasks such as data loading, preprocessing, feature extraction, and identification of key hand joints, which are crucial for subsequent OA severity assessments.
 
+Removing Images Without Labels
+The provided script (removeImagesWithoutLabels.m) identifies and removes images from the dataset that lack corresponding label information. This step ensures a clean and well-annotated dataset for subsequent processing, eliminating inconsistencies in the image-label pairing.
+
+Data Loading (loadImagesAndLabels.m)
+The script loads X-ray images and their associated label information from specified directories. Images are loaded from the image directory (imageDir), and labels are extracted from corresponding text files in the label directory (labelDir).
+
+Preprocessing Images (preprocessImages.m)
+The preprocessing script takes loaded X-ray images through essential preprocessing steps:
+
+Resize Images: Standardize images to a common size (default: 512x512 pixels).
+Convert to Grayscale: Transform images to grayscale.
+Normalize Pixel Values: Scale pixel values to the range [0, 1].
+Adjust Contrast: Enhance image contrast using imadjust.
+Histogram Equalization: Optionally apply histogram equalization.
+Binarize Images: Create binary images.
+Extracting Features (extractFeatures.m)
+The feature extraction script, extractFeatures.m, showcased the application of the Canny edge detector and morphological operations for robust feature identification. The resulting visualizations displayed the effectiveness of the employed techniques in enhancing or diminishing specific features within the images. The script successfully extracted features, laying the groundwork for subsequent joint identification.
+
+Identifying Joints (identifyJoints.m)
+The hand joint identification script, identifyJoints.m, utilized morphological operations to identify and highlight key hand joints in the X-ray images. By performing dilation, connected component extraction, and region filtering based on size and eccentricity, the script accurately identified and delineated valid hand joint regions. The output binary images showcased the successful identification of hand joints, a crucial step for subsequent Osteoarthritis (OA) severity assessment.
+
+Instructions for Usage
+Data Preparation:
+
+Organize X-ray images in the imageDir directory.
+Ensure corresponding label files are present in the labelDir directory.
+Data Loading:
+
+Execute loadImagesAndLabels.m to load images and label information.
+Preprocessing:
+
+Run preprocessImages.m to preprocess the loaded images.
+Feature Extraction:
+
+Execute extractFeatures.m to extract features from preprocessed images.
+Joint Identification:
+
+Run identifyJoints.m to identify hand joints based on extracted features.
+Evaluation:
+
+Run the evaluation section to calculate and display model performance metrics.
+Dependencies
+Ensure MATLAB is installed with the Image Processing Toolbox.
+
+Notes
+Modify scripts as needed based on label file format and customization preferences.
+Visualizations are provided for a subset of images in the feature extraction script.
